@@ -1,32 +1,31 @@
 # ShakeSearch
 
-Welcome to the Pulley Shakesearch Take-home Challenge! In this repository,
-you'll find a simple web app that allows a user to search for a text string in
-the complete works of Shakespeare.
+### Methodology
+- Divided the text into documents for easy readability of results
+- The documents are created using the following steps:
+    - Split the text in paragraphs, paragraphs are identified using two consecutive newlines 
+    - If the paragraph exceeds 1000 characters, again split the paragraph into sub-paragraphs of 1000 characters
+    - While splitting the paragraph, if a sentence is left incomplete due to length contraint, then completed the sentence using the nearest full-stop 
+- Along with the documents creation, simultaneously, created weighted inverted index on the documents by maintaining a map of documents in which the word occurs and it's frequency in the document
+- At the end, the results are sorted by word frequency in the document (Note: For multi-word, the frequencies are added)
 
-You can see a live version of the app at
-https://pulley-shakesearch.herokuapp.com/. Try searching for "Hamlet" to display
-a set of results.
+### Features Added
 
-In it's current state, however, the app is just a rough prototype. The search is
-case sensitive, the results are difficult to read, and the search is limited to
-exact matches.
+##### Backend
+- Exact word search
+- Multiword search: Multiple words can be searched at a given time and the results will be calculates using OR operator on the given words
+- Fuzzy word search: If a word does not completely match the words present in the document, a nearest word is calculated based on levenstein's distance
+- Regex search: A regular expression can also be given in the search using /<regex>/. Note, multiword search is disabled on regex
 
-## Your Mission
+##### Frontend
+- In all cases, highlighting the matching strings for readability
+- In case of fuzzy search, highlighting the word for which the results are calculated
+- Displaying total number of documents/paragraphs the word was found in
 
-Improve the search backend. Think about the problem from the **user's perspective**
-and prioritize your changes according to what you think is most useful. 
+### Future Scope
 
-## Evaluation
-
-We will be primarily evaluating based on how well the search works for users. A search result with a lot of features (i.e. multi-words and mis-spellings handled), but with results that are hard to read would not be a strong submission. 
-
-
-## Submission
-
-1. Fork this repository and send us a link to your fork after pushing your changes. 
-2. Heroku hosting - The project includes a Heroku Procfile and, in its
-current state, can be deployed easily on Heroku's free tier.
-3. In your submission, share with us what changes you made and how you would prioritize changes if you had more time.
-
-
+- Perform stemming to show words similar to the query
+- Show multiple different suggestions for fuzzy word and allow user to choose the correct word
+- Enable fuzzy search along with regex
+- Allow custom AND and OR operator
+- Display a summary of the paragraph rather than displaying the complete paragraph and an option to expand
