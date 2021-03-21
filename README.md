@@ -9,7 +9,7 @@
 - Along with the documents creation, simultaneously, created weighted inverted index on the documents by maintaining a map of documents in which the word occurs and it's frequency in the document
 - At the end, the results are sorted by word frequency in the document (Note: For multi-word, the frequencies are added)
 
-### Features Added
+## Features Added
 
 ### Backend
 - Exact word search
