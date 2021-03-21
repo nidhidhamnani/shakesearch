@@ -17,7 +17,7 @@
 - Fuzzy word search: If a word does not completely match the words present in the document, a nearest word is calculated based on levenstein's distance
 - Regex search: A regular expression can also be given in the search using /<regex>/. Note, multiword search is disabled on regex
 
-#### Frontend
+### Frontend
 - In all cases, highlighting the matching strings for readability
 - In case of fuzzy search, highlighting the word for which the results are calculated
 - Displaying total number of documents/paragraphs the word was found in
@@ -32,4 +32,5 @@
 
 ## Search Engine
 
-![Search Engine](./Search.png?raw=true "Search Engine")
+![Search Engine](./images/Search.png?raw=true "Search Engine")
+![Search Engine](./images/SearchWithFuzzy.png?raw=true "Search Engine (Fuzzy Words)")
