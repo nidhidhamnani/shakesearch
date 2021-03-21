@@ -1,6 +1,6 @@
 # ShakeSearch
 
-### Methodology
+## Methodology
 - Divided the text into documents for easy readability of results
 - The documents are created using the following steps:
     - Split the text in paragraphs, paragraphs are identified using two consecutive newlines 
@@ -11,18 +11,18 @@
 
 ### Features Added
 
-##### Backend
+### Backend
 - Exact word search
 - Multiword search: Multiple words can be searched at a given time and the results will be calculates using OR operator on the given words
 - Fuzzy word search: If a word does not completely match the words present in the document, a nearest word is calculated based on levenstein's distance
 - Regex search: A regular expression can also be given in the search using /<regex>/. Note, multiword search is disabled on regex
 
-##### Frontend
+#### Frontend
 - In all cases, highlighting the matching strings for readability
 - In case of fuzzy search, highlighting the word for which the results are calculated
 - Displaying total number of documents/paragraphs the word was found in
 
-### Future Scope
+## Future Scope
 
 - Perform stemming to show words similar to the query
 - Show multiple different suggestions for fuzzy word and allow user to choose the correct word
