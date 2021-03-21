@@ -29,3 +29,7 @@
 - Enable fuzzy search along with regex
 - Allow custom AND and OR operator
 - Display a summary of the paragraph rather than displaying the complete paragraph and an option to expand
+
+## Search Engine
+
+![Search Engine](./Search.png?raw=true "Search Engine")
