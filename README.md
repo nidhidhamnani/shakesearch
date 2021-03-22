@@ -29,7 +29,7 @@ The [current search](https://nidhidhamnani-search.herokuapp.com/) is designed by
 - In case of fuzzy search, highlighting the word for which the results are calculated
 - Displaying total number of documents/paragraphs the word was found in
 
-## Future Scope (Sorted Desc by Priority)
+## Future Scope (Starting from higest priority, in order)
 
 - Improve the search performance by using a better method for indexing and using a cache for frequent queries
 - Show only 15/20 results with pagination
