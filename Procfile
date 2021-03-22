@@ -1,1 +1,1 @@
-web: bin/shakesearch
+web:    go run main.go indexUtil.go searchUtil.go
